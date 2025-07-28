@@ -5,6 +5,5 @@ import (
 )
 
 func main() {
-
-	fmt.Println("Welcome to Tariq Load Balancer")
+	fmt.Println("Welcome to TariqLB  - An educational load balancer")
 }
