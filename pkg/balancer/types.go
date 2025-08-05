@@ -2,6 +2,7 @@ package balancer
 
 import (
 	"net/http/httputil"
+	"net/url"
 	"sync"
 )
 
@@ -15,7 +16,7 @@ type Server struct {
 // ApplicationLB is a load balancer that acts on L7 protocols: HTTP and HTTPs
 type ApplicationLoadBalancer struct {
 	serverPool []Server
-	url        string
+	url        url.URL
 	current    *Server // Points to the last used/current server
 	proxy      *httputil.ReverseProxy
 }
